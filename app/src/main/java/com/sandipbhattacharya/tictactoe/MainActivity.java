@@ -14,13 +14,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button goToAnotherClass =  findViewById(R.id.buttonPlay);
-        goToAnotherClass.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TikTakTowPlay.class);
-                startActivity(intent);
-            }
-        });
-
+    }
+    public void switchScreen(View v){
+        Intent intent = new Intent(MainActivity.this, TikTakTowPlay.class);
+        startActivity(intent);
     }
 }
