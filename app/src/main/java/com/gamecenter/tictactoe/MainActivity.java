@@ -1,4 +1,4 @@
-package com.sandipbhattacharya.tictactoe;
+package com.gamecenter.tictactoe;
 
 import androidx.appcompat.app.AppCompatActivity;
 

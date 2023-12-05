@@ -1,4 +1,4 @@
-package com.sandipbhattacharya.tictactoe;
+package com.gamecenter.tictactoe;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,8 +6,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 public class TikTakTowPlay extends AppCompatActivity {
     int gameScoreX = 0;
