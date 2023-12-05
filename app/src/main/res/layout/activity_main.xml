@@ -10,8 +10,8 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="163dp"
-        android:layout_height="181dp"
+        android:layout_width="246dp"
+        android:layout_height="201dp"
         android:layout_alignParentEnd="true"
         android:gravity="center"
         android:text="TIKTAKTOW"
@@ -29,6 +29,7 @@
         android:layout_width="105dp"
         android:layout_height="91dp"
         android:text="PLAY"
+        android:onClick="switchScreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
