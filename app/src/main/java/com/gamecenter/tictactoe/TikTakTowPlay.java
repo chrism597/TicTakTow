@@ -27,34 +27,14 @@ public class TikTakTowPlay extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tik_tak_tow_play);
     }
-    public void displayScoreX(int scoreCount){
-        TextView scoreXCount = (TextView) findViewById(R.id.scoreCounterX);
-        scoreXCount.setText(""+scoreCount);
-    }
-    public void displayScoreY(int scoreCount){
-        TextView scoreYCount = (TextView) findViewById(R.id.scoreCounterY);
-        scoreYCount.setText(""+scoreCount);
-    }
-    public void scoreCounterX(){
-        if(winner == "0"){
-            gameScoreX++;
-        }
-        displayScoreX(gameScoreX);
-    }
-    public void scoreCounterY(){
-        if(winner == "X"){
-            gameScoreY++;
-        }
-        displayScoreY(gameScoreY);
-    }
 
     /**
      * This method contains the entire functionality of my game
      * @param view
      */
     public void play(View view) {
-        int scoreX = 0;
         TextView scoreXCount = (TextView) findViewById(R.id.scoreCounterX);
+        TextView scoreYCount = (TextView) findViewById(R.id.scoreCounterY);
         ImageView ivClicked = (ImageView) view;
         ivClicked.setAlpha(1.0f);
         ivClicked.setVisibility(View.VISIBLE);
@@ -76,15 +56,25 @@ public class TikTakTowPlay extends AppCompatActivity {
                         gameState[winningPosition[0]] != -1){
                     gameActive = false;
                     if(gameState[winningPosition[0]] == 0){
-                        scoreX++;
-                        winner = "0";
-                        scoreXCount.setText(""+scoreX);
+                        winner = "O";
+                        gameScoreX++;
+                        scoreXCount.setText(""+gameScoreX);
                     }
                     TextView tvMessage = findViewById(R.id.tvMessage);
                     tvMessage.setText(winner + " has won!");
                     LinearLayout layout = findViewById(R.id.restartLayout);
                     layout.setVisibility(View.VISIBLE);
-                }else{
+                    if (gameState[winningPosition[1]] == 1) {
+                        winner = "X";
+                        gameScoreY++;
+                        scoreYCount.setText(""+gameScoreY);
+                    }
+                    tvMessage = findViewById(R.id.tvMessage);
+                    tvMessage.setText(winner + " has won!");
+                    layout = findViewById(R.id.restartLayout);
+                    layout.setVisibility(View.VISIBLE);
+                    }
+                else {
                     boolean gameOver = true;
                     for (int currentPlayer: gameState
                     ) {
@@ -101,16 +91,10 @@ public class TikTakTowPlay extends AppCompatActivity {
                 }
             }
         }
-        scoreCounterX();
-        scoreCounterY();
     }
 
     public void playAgain(View view) {
-        int scoreY = 0;
-        TextView scoreYCount = (TextView) findViewById(R.id.scoreCounterY);
         winner = "X";
-        scoreY++;
-        scoreYCount.setText("scoreY");
         gameActive = true;
         currentPlayer = 0;
         LinearLayout layout = findViewById(R.id.restartLayout);
