@@ -58,7 +58,7 @@ public class TikTakTowPlay extends AppCompatActivity {
                     if(gameState[winningPosition[0]] == 0){
                         winner = "O";
                         gameScoreX++;
-                        scoreXCount.setText(""+gameScoreX);
+                        scoreXCount.setText("O: "+gameScoreX);
                     }
                     TextView tvMessage = findViewById(R.id.tvMessage);
                     tvMessage.setText(winner + " has won!");
@@ -67,7 +67,7 @@ public class TikTakTowPlay extends AppCompatActivity {
                     if (gameState[winningPosition[1]] == 1) {
                         winner = "X";
                         gameScoreY++;
-                        scoreYCount.setText(""+gameScoreY);
+                        scoreYCount.setText("X: "+gameScoreY);
                     }
                     tvMessage = findViewById(R.id.tvMessage);
                     tvMessage.setText(winner + " has won!");

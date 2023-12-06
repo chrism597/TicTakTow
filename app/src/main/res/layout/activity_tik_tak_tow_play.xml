@@ -6,24 +6,46 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     tools:context=".TikTakTowPlay">
-    <LinearLayout android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
+    <LinearLayout
+        android:layout_width="169dp"
+        android:layout_height="84dp"
         android:foregroundGravity="center">
+
+        <TextView
+            android:id="@+id/Score"
+            android:layout_width="82dp"
+            android:layout_height="83dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="Score:" />
 
         <TextView
             android:id="@+id/scoreCounterX"
             android:layout_width="82dp"
             android:layout_height="83dp"
-            android:text="0"
-            android:gravity="center"/>
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:text="O: 0"
+            android:textColor="#21419F"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/scoreCounterY"
             android:layout_width="82dp"
             android:layout_height="83dp"
-            android:text="0"
-            android:gravity="center"/>
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="X: 0"
+            android:textColor="#AF2323"
+            android:textStyle="bold" />
+
+
     </LinearLayout>
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,90 +54,104 @@
         android:orientation="vertical"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_margin="6dp"
-                android:src="@drawable/x"
+                android:layout_weight="1"
+                android:alpha="0.0"
                 android:onClick="play"
-                android:tag="0"
-                android:alpha="0.0" />
+                android:src="@drawable/x"
+                android:tag="0" />
+
             <View
                 android:layout_width="6dp"
                 android:layout_height="match_parent"
                 android:background="@color/black" />
+
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_margin="6dp"
-                android:src="@drawable/x"
+                android:layout_weight="1"
+                android:alpha="0.0"
                 android:onClick="play"
-                android:tag="1"
-                android:alpha="0.0" />
+                android:src="@drawable/x"
+                android:tag="1" />
+
             <View
                 android:layout_width="6dp"
                 android:layout_height="match_parent"
                 android:background="@color/black" />
+
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_margin="6dp"
-                android:src="@drawable/x"
+                android:layout_weight="1"
+                android:alpha="0.0"
                 android:onClick="play"
-                android:tag="2"
-                android:alpha="0.0" />
+                android:src="@drawable/x"
+                android:tag="2" />
         </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="6dp"
             android:background="@color/black" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_margin="6dp"
-                android:src="@drawable/x"
+                android:layout_weight="1"
+                android:alpha="0.0"
                 android:onClick="play"
-                android:tag="3"
-                android:alpha="0.0" />
+                android:src="@drawable/x"
+                android:tag="3" />
+
             <View
                 android:layout_width="6dp"
                 android:layout_height="match_parent"
                 android:background="@color/black" />
+
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_margin="6dp"
-                android:src="@drawable/x"
+                android:layout_weight="1"
+                android:alpha="0.0"
                 android:onClick="play"
-                android:tag="4"
-                android:alpha="0.0" />
+                android:src="@drawable/x"
+                android:tag="4" />
+
             <View
                 android:layout_width="6dp"
                 android:layout_height="match_parent"
                 android:background="@color/black" />
+
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_margin="6dp"
-                android:src="@drawable/x"
+                android:layout_weight="1"
+                android:alpha="0.0"
                 android:onClick="play"
-                android:tag="5"
-                android:alpha="0.0" />
+                android:src="@drawable/x"
+                android:tag="5" />
         </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="6dp"
@@ -161,6 +197,9 @@
                 android:alpha="0.0" />
         </LinearLayout>
     </LinearLayout>
+
+
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -185,7 +224,6 @@
             android:onClick="playAgain"
             android:text="Play Again" />
     </LinearLayout>
-
 
 
 </RelativeLayout>
