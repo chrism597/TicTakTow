@@ -17,9 +17,10 @@
             android:layout_width="82dp"
             android:layout_height="83dp"
             android:layout_weight="1"
-            android:textStyle="bold"
             android:gravity="center"
-            android:text="Score:" />
+            android:text="Score"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/scoreCounterX"
@@ -27,7 +28,7 @@
             android:layout_height="83dp"
             android:layout_weight="1"
             android:gravity="center"
-
+            android:textSize="20sp"
             android:text="O: 0"
             android:textColor="#21419F"
             android:textStyle="bold" />
@@ -37,6 +38,7 @@
             android:layout_width="82dp"
             android:layout_height="83dp"
             android:layout_weight="1"
+            android:textSize="20sp"
             android:gravity="center"
             android:text="X: 0"
             android:textColor="#AF2323"
